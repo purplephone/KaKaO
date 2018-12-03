@@ -419,8 +419,9 @@ body.sidebar-toggled footer.sticky-footer {
   width: 600px;
 }
 
-.write-submit{
+.submit_button{
   float: right;
+  margin: 5px;
 }
 
 .write-title{
@@ -441,6 +442,43 @@ body.sidebar-toggled footer.sticky-footer {
   margin: 5px;
 }
 
-.lecture-select{
-  float: right;
+.text_extend{
+  font-size: 1.3rem;
+}
+
+.text_extned1{
+  font-size: 1.4rem;
+}
+
+.white_jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+}
+
+.login_object{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  width : 400px;
+  height: 250px;
+}
+
+.login_background{
+  background-color: rgba(236, 240, 241, 0);
+}
+
+.float_left{
+  float: left;
+  margin: 5px;
+}
+
+.btn-size{
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
