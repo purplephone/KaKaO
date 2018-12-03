@@ -34,11 +34,22 @@
     }
     </script>
   </head>
-  <body>
-    <h1>TableOptions.html</h1>
+  <body style = "background-color: #435866">
+    <font color = #eeeeee>
+    <h1 style = "background-color : #343a40" >
+      <font color = #eeeeee>
+      TableOptions.html
+    </font>
+    </h1>
 
     <form class="" action="js/dataContainer.js" method="get">
-      <ul>
+
+      <ul style = "background-color : #212529">
+        <li >
+
+          공강 요일을 선택해 주세요
+
+        </li>
         <li><label for="mon">Mon</label>
         <input id="mon" type="checkbox" name="option" value="Mon"></li>
         <li><label for="tue">Tue</label>
@@ -50,14 +61,15 @@
         <li><label for="fri">Fri</label>
         <input id="fri" type="checkbox" name="option" value="Fri"></li>
       </ul>
-      <table border="1">
-        <tbody>
+      <center>
+      <table border="1" style = "width: 100%;">
+        <tbody style="border :1px solid #000000">
           <tr>
-            <td><li><input id="option1" type="checkbox" name="option" value="lunchTime"></li></td>
-            <td><label for="option1">점심시간 확보</label></td>
+            <td style = "background-color : #343a40"><input id="option1" type="checkbox" name="option" value="lunchTime"></td>
+            <td style = "background-color : #212529"><label for="option1">점심시간 확보</label></td>
           </tr>
           <tr>
-            <td><li><label for="09">09~</label>
+            <td style = "background-color : #343a40"><li><label for="09">09~</label>
             <input id="09" type="checkbox" name="option" value="09"></li>
             <li><label for="10">10~</label>
             <input id="10" type="checkbox" name="option" value="10"></li>
@@ -66,34 +78,36 @@
             <li><label for="12">12~</label>
             <input id="12" type="checkbox" name="option" value="12"></li>
             </td>
-            <td><label>첫 강의 시작 시간</label></td>
+            <td style = "background-color : #212529"><label>첫 강의 시작 시간을 설정할수 있습니다</label></td>
           </tr>
           <tr>
-            <td><select multiple="multiple">
+            <td style = "background-color : #343a40"><select multiple="multiple">
               <option name="option" value="~15">~15</option>
               <option name="option" value="~16">~16</option>
               <option name="option" value="~17">~17</option>
               <option name="option" value="~18">~18</option>
             </select></td>
-            <td><label>마지막 강의 종료 시간</label></td>
+            <td style = "background-color : #212529"><label>마지막 강의 종료 시간을 설정할수 있습니다</label></td>
           </tr>
           <tr>
-            <td>
+            <td style = "background-color : #343a40">
               <select multiple="multiple">
                 <option name="option" value="Jang">Jang</option>
                 <option name="option" value="Yong">Yong</option>
                 <option name="option" value="Han">Han</option>
               </select>
             </td>
-            <td><label for="">교수님 선택(ctrl+클릭 : 다중선택)</label></td>
+            <td style = "background-color : #212529"><label for="">교수님 선택 (Ctrl + Click : 다중선택)</label></td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="2"><input type="button" name="확인" value="ok" onclick="makeDisplay();"></td>
+            <td colspan="2" style = "background-color : #212529"><input type="button" name="확인" value="ok" onclick="makeDisplay();"></td>
           </tr>
         </tfoot>
       </table>
+    </center>
     </form>
+  </font>
   </body>
 </html>

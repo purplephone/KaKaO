@@ -46,7 +46,11 @@
         localStorage.setItem("dataB", JSON.stringify(lib_arr));
         localStorage.setItem("dataC", JSON.stringify(libs_arr));
       }
+      function check(CK) {
+        tr = CK.parentNode.parentNode;
+        tr.style.backgroundColor = (CK.checked) ? "#888888" : "#eeeeee";
 
+      }
 
     </script>
     <title>Welcome to "C"간표</title>
@@ -136,7 +140,7 @@
         <div class="container-fluid">
           <!-- Page Content 페이지 최 상단부 메세지 -->
           <h1>"Welcome to "C"간표
-            <INPUT type='BUTTON' value=' ' style="WIDTH: 30pt; HEIGHT: 30pt">
+            <!-- <INPUT type='BUTTON' value=' ' style="WIDTH: 30pt; HEIGHT: 30pt"> -->
           </h1>
           <hr></hr>
           <!--본문처리-->
@@ -230,7 +234,7 @@
                         <td class="td1"></td>
                         <td class="td2"><input type="checkbox" name="mjr" class="a" value="1"></td>
                         <td class="td3"></td>
-                        <td class="td4"><input type="checkbox" name="mjr" class="a" value="2"></td>
+                        <td class="td4"><input type="checkbox" name="mjr" class="a" value="2" ></td>
                         <td class="td5"></td>
                         <td class="td6"></td>
                         <td class="td7"><input type="checkbox" name="mjr" class="a" value="3"></td>
@@ -323,7 +327,7 @@
                         <td class="td6"></td>
                         <td class="td7"></td>
                         <td class="td8"><input type="checkbox" name="mjr" class="a" value="38"></td>
-                        <td class="td9"><input type="checkbox" name="mjr" class="a" value="39"></td>
+                        <td class="td9"><input type="checkbox" name="mjr" class="a" value="39" ></td>
                       </tr>
 
 
@@ -352,7 +356,20 @@
                   width: 100%;
                 }
                 .tb2, .th22, .td22 {
-                  border: 3px solid #bcbcbc;
+                  border: 3px solid #708090;
+                }
+                .th23 {
+                  border: none;
+                }
+                .th24 {
+                  border: none;
+                }
+                .td24 {
+                  /* //border-top: 3px solid #bcbcb; */
+                /* //  border : none; */
+                  height: 70px;
+
+                  border: none;
                 }
           </style>
           <form class="" action="dataContainer.js" method="get">
@@ -366,119 +383,137 @@
               </thead>
               <tbody>
                 <tr><!--첫줄-->
-                  <th class ="th22"  rowspan="3"><input type="checkbox" name="lib" class="b" value="1">기독교</th>
-                  <td class ="td22" ><input type="checkbox" name="libs" class="c" value="1">종교와 과학</td>
+                  <th class ="th22"  rowspan="3"><input type="checkbox" name="lib" class="b" value="1" onclick="check(this)">기독교</th>
+                  <td class ="td22" ><input type="checkbox" name="libs" class="c" value="1" onclick="check(this)" >종교와 과학</td>
                 </tr>
                 <tr>
-                  <td class ="td22" ><input type="checkbox" name="libs" class="c" value="2">현대사회와 기독교 윤리</th>
+                  <td class ="td22" ><input type="checkbox" name="libs" class="c" value="2" onclick="check(this)" >현대사회와 기독교 윤리</th>
                 </tr>
                 <tr>
-                  <td class ="td22" ><input type="checkbox" name="libs" class="c" value="3">기독교와 사회</th>
+                  <td class ="td22" ><input type="checkbox" name="libs" class="c" value="3" onclick="check(this)" >기독교와 사회</th>
                 </tr>
 
-                <th class ="th22"  rowspan="2"><input type="checkbox" name="lib" class="b" value="2">사고와표현</th>
-                <td class ="td22" ><input type="checkbox" name="libs" class="c" value="4">글쓰기</td>
+                <th class ="th22"  rowspan="2" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="2" onclick="check(this)" >사고와표현</th>
+                <td class ="td22" ><input type="checkbox" name="libs" class="c" value="4" onclick="check(this)" >글쓰기</td>
               </tr>
               <tr>
-                <td class ="td22" ><input type="checkbox" name="libs" class="c" value="5">발표와 토의</th>
+                <td class ="td22" ><input type="checkbox" name="libs" class="c" value="5" onclick="check(this)" >발표와 토의</th>
               </tr>
 
-              <th class ="th22"  rowspan="3"><input type="checkbox" name="lib" class="b" value="3">역사와 철학</th>
-              <td class ="td22" ><input type="checkbox" name="libs" class="c" value="6">철학과 인간</td>
+              <th class ="th22"  rowspan="3" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="3" onclick="check(this)" >역사와 철학</th>
+              <td class ="td22" ><input type="checkbox" name="libs" class="c" value="6" onclick="check(this)" >철학과 인간</td>
             </tr>
             <tr>
-              <td class ="td22" ><input type="checkbox" name="libs" class="c" value="7">한국 근현대사의 이해</td>
+              <td class ="td22" ><input type="checkbox" name="libs" class="c" value="7" onclick="check(this)" >한국 근현대사의 이해</td>
             </tr>
             <tr>
-              <td class ="td22" ><input type="checkbox" name="libs" class="c" value="8">역사와 문명</td>
+              <td class ="td22" ><input type="checkbox" name="libs" class="c" value="8" onclick="check(this)" >역사와 문명</td>
             </tr>
 
-            <th class ="th22"  rowspan="3"><input type="checkbox" name="lib" class="b" value="4">사회와 공동체</th>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="9">세계화와 사회변화</td>
+            <th class ="th22"  rowspan="3" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="4" onclick="check(this)" >사회와 공동체</th>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="9" onclick="check(this)" >세계화와 사회변화</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="10">민주주의와 현대사회</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="10" onclick="check(this)" >민주주의와 현대사회</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="11">여성 소수자 공동체</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="11" onclick="check(this)" >여성 소수자 공동체</td>
             </tr>
 
-            <th class ="th22"  rowspan="3"><input type="checkbox" name="lib" class="b" value="5">문화</th>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="12">글로벌 문화</td>
+            <th class ="th22"  rowspan="3" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="5" onclick="check(this)" >문화</th>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="12" onclick="check(this)" >글로벌 문화</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="13">예술과 창조성</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="13" onclick="check(this)" >예술과 창조성</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="14">고전으로 읽는 인문학</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="14" onclick="check(this)" >고전으로 읽는 인문학</td>
             </tr>
 
-            <th class ="th22"  rowspan="3"><input type="checkbox" name="lib" class="b" value="6">과학과 기술</th>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="15">환경과 인간</td>
+            <th class ="th22"  rowspan="3" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="6" onclick="check(this)" >과학과 기술</th>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="15" onclick="check(this)" >환경과 인간</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="16">우주 생명 마음</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="16" onclick="check(this)" >우주 생명 마음</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="17">창업 입문</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="17" onclick="check(this)" >창업 입문</td>
             </tr>
 
-            <th class ="th22"  rowspan="4"><input type="checkbox" name="lib" class="b" value="7">영어</th>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="18">영어1</td>
+            <th class ="th22"  rowspan="4" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="7" onclick="check(this)" >영어</th>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="18" onclick="check(this)" >영어1</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="19">영어2</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="19" onclick="check(this)" >영어2</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="20">영어회화1&3</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="20" onclick="check(this)" >영어회화1&3</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="21">영어회화2&4</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="21" onclick="check(this)" >영어회화2&4</td>
             </tr>
 
-            <th class ="th22"  rowspan="3"><input type="checkbox" name="lib" class="b" value="8">기초과학</th>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="22">물리학1</td>
+            <th class ="th22"  rowspan="3" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="8" onclick="check(this)" >기초과학</th>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="22" onclick="check(this)" >물리학1</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="23">물리학실험1</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="23" onclick="check(this)" >물리학실험1</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="24">일반생물학</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="24" onclick="check(this)" >일반생물학</td>
             </tr>
 
-            <th class ="th22"  rowspan="6"><input type="checkbox" name="lib" class="b" value="9">수학</th>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="25">미적분학1</td>
+            <th class ="th22"  rowspan="6" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="9" onclick="check(this)" >수학</th>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="25" onclick="check(this)" >미적분학1</td>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="26">이산수학개론</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="26" onclick="check(this)" >이산수학개론</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="27">고급이산수학</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="27" onclick="check(this)" >고급이산수학</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="28">선형대수학개론</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="28" onclick="check(this)" >선형대수학개론</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="29">공학수학</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="29" onclick="check(this)" >공학수학</td>
             </tr>
             <tr>
-            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="30">통계학개론</td>
+            <td class ="td22" ><input type="checkbox" name="libs" class="c" value="30" onclick="check(this)" >통계학개론</td>
             </tr>
             <tr>
-              <th class ="th22"  rowspan="6"><input type="checkbox" name="lib" class="b" value="10">채플</th>
+               <td class ="td22"  colspan="2" align = "middle" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="10" onclick="check(this)" >채플</td>
             </tr>
+            <!-- <tr>
+              <td class ="td24"  colspan="2" align = "middle" onclick="check(this)" >
+
+              </td>
+            </tr> -->
 
               </tbody>
-              <tfoot>
+              <!-- <tfoot>
                 <tr>
-                  <td>
-                    <input type = "button" name = "makeTable" value = "시간표 생성 " onclick = "makePop();">
-                  </td>
+                  <th>
+                     <td class ="th24"  colspan="2" align = "left" onclick="check(this)" ><input type="checkbox" name="lib" class="b" value="10" onclick="check(this)" >채플</td>
+                  <th>
                 </tr>
-              </tfoot>
+
+              </tfoot> -->
             </table>
-
-
-
+            <!-- <table>
+              <tr>
+                <td class ="td24"  colspan="2" align = "middle" onclick="check(this)" >
+                  <input type = "button" style="height:60px; width:150px;" name = "makeTable" value = "시간표 생성 " onclick = "makePop();" onclick="check(this)" >
+                </td>
+                <td class ="td24"  colspan="2" align = "middle">
+                  <!-- <input type = "button" style="height:60px; width:150px;" name = "makeTable" value = "시간표 생성 " onclick = "makePop();"> -->
+                <!-- </td>
+              </tr>
+              <tr>
+              </tr>
+            </table> -->
+            <center>
+              <input type = "button" style="height:60px; width:150px;"align = "middle" name = "makeTable" value = "시간표 생성 " onclick = "makePop();">
+            </center>
 
 
 
