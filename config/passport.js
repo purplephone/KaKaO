@@ -16,7 +16,7 @@ module.exports = function(passport) {
     passport.use('kakao-login', new KakaoStrategy({
         clientID: '9a23c80e10efd8c3308c2091dc87ebc0',
         clientSecret: 'M6bA0Id268NwzeA7icTLcYnOTiuQhf0t',
-        callbackURL: 'http://localhost/oauth/kakao/callback',
+        callbackURL: 'https://mjuctable.herokuapp.com/oauth/kakao/callback',
 
     },
     function(zaccessToken, refreshToken, profile, done) {
