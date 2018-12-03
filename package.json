@@ -1,0 +1,25 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Web Server",
+  "main": "Server.js",
+  "scripts": {
+    "start": "node Serve.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines":{
+    "node":"8.12.0",
+    "npm":"6.4.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "md5": "^2.2.1",
+    "mongoose": "^5.3.4",
+    "passport": "^0.4.0",
+    "passport-kakao": "0.0.5",
+    "pug": "^2.0.3"
+  }
+}
