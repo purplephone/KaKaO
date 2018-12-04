@@ -125,6 +125,11 @@
       // TestLibs = libsarr;
       // Testlib = libarr;
       //let TestOpt1='111110000000000000000000000000000000000000000000000000000000';
+      let Soption = '';
+      Soption=Soption+optarr[5];
+      Soption=Soption+optarr[6];
+
+      //let Soption="11";
 
        let Cate = new Array(); // 넘겨받은 정보를 카테고리별로 분류받아 저장
 
@@ -139,7 +144,6 @@
       Cate[8]=new Array();
       Cate[9]=new Array();
 
-      let Soption="11";
 
       function MakeRandom(min, max){
         let RandVal = Math.random() * (max- min+1) + min;
@@ -575,7 +579,9 @@
           document.write('<option value='+i+' name="timeSelect">['+(i+1)+']</option>');
         }
         document.write('</select></td>');
-        alert(localStorage.getItem("choice"));
+        //
+        //
+        //alert(localStorage.getItem("choice"));
 
         if (localStorage.getItem("choice") == false || localStorage.getItem("choice") == null) {
           document.write('<td id = "dest" style = "width: 100%; height:100%; background-color : #343a40;"><font color = #eeeeee>select box에서 원하는 시간표를 선택하세요</font></td>');
@@ -604,28 +610,30 @@
         document.write('</tfoot>');
         document.write('</table>');
 
-
+      //  document.write(Soption);
         document.write('</body>');
         localStorage.removeItem("sel_value");
         localStorage.removeItem("choice");
 
       }
 
-
+      let flag='0';
 
 
 
       let goBack = function(){
-  //     for (let i = 0; i < rad.length; i++) {
-    //     if(rad[i].checked){
-      //   alert((i+1) + "번 째 시간표를 생성한다.");
-        // localStorage.setItem("Rad", i);
-        //}
-      //}
+     //  for (let i = 0; i < rad.length; i++) {
+     //    if(rad[i].checked){
+     //     alert((i+1) + "번 째 시간표를 생성한다.");
+     //     localStorage.setItem("Rad", i);
+     //    }
+     // }
       //opener.location = "Main.html";
-      opener.Location.href="Main.html";
+      flag ='1';
       setTimeout("self.close()",1000);
+      
       //opener.location = "Main.html";
+      //self.close();
       }
 
       let selectEvent = function(){
