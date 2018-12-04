@@ -575,7 +575,9 @@
           document.write('<option value='+i+' name="timeSelect">['+(i+1)+']</option>');
         }
         document.write('</select></td>');
-        alert(localStorage.getItem("choice"));
+        //
+        //
+        //alert(localStorage.getItem("choice"));
 
         if (localStorage.getItem("choice") == false || localStorage.getItem("choice") == null) {
           document.write('<td id = "dest" style = "width: 100%; height:100%; background-color : #343a40;"><font color = #eeeeee>select box에서 원하는 시간표를 선택하세요</font></td>');
@@ -616,16 +618,16 @@
 
 
       let goBack = function(){
-  //     for (let i = 0; i < rad.length; i++) {
-    //     if(rad[i].checked){
-      //   alert((i+1) + "번 째 시간표를 생성한다.");
-        // localStorage.setItem("Rad", i);
-        //}
-      //}
+     //  for (let i = 0; i < rad.length; i++) {
+     //    if(rad[i].checked){
+     //     alert((i+1) + "번 째 시간표를 생성한다.");
+     //     localStorage.setItem("Rad", i);
+     //    }
+     // }
       //opener.location = "Main.html";
-      //setTimeout("self.close()",1000);
-      self.close();
-      opener.location = "Main.html";
+      setTimeout("self.close()",1000);
+      //opener.location = "Main.html";
+      //self.close();
       }
 
       let selectEvent = function(){
